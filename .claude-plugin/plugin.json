@@ -1,0 +1,9 @@
+{
+  "name": "skills",
+  "version": "0.1.0",
+  "description": "JC Grubbs's personal collection of Claude Code skills.",
+  "author": {
+    "name": "JC Grubbs",
+    "email": "grubbs.jc@gmail.com"
+  }
+}
