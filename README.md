@@ -7,7 +7,7 @@ packaged as a plugin so they're available in every session, on any project.
 
 | Skill | Invoke | What it does |
 |-------|--------|--------------|
-| `thermo-nuclear-code-quality-review` | `/skills:thermo-nuclear-code-quality-review` | An unusually strict maintainability review — abstraction quality, runaway file size, spaghetti conditionals, and ambitious "code judo" restructurings. User-invoked only. |
+| `code-review` | `/skills:code-review` | A Swiss-Army knife style code-reviewer. |
 
 ## Install
 
