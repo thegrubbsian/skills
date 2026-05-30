@@ -38,9 +38,13 @@ Frontend quality is not only the code. A `<div onClick>` styled to look like a b
 
 ## Testing
 
-- Test what the user experiences. The Testing Library philosophy is to query by role and text, the way a person finds things, not by component internals or test ids that couple the test to the implementation.
-- Mock at the network boundary (MSW), not by stubbing the modules under test. Stubbing internals tests the mock.
-- Snapshot-everything tests rot into noise that everyone clicks past. Snapshot deliberately, not reflexively.
+- **Test what the user experiences.** The Testing Library philosophy is to query by role and text, the way a person finds things, not by component internals, class names, or `data-testid` soup that couples the test to the implementation. If a query is hard to write by role, that's often an accessibility smell worth fixing first.
+- **`userEvent`, not `fireEvent`.** `userEvent` simulates the real sequence (focus, keydown, input, change) a user actually triggers; `fireEvent` dispatches one synthetic event and misses the bugs that live in between. Await it.
+- **`findBy` / `waitFor`, never an arbitrary timeout.** Wait for the thing to appear, not for a hardcoded number of milliseconds. `await new Promise(r => setTimeout(r, 500))` in a test is a flake that passes on your machine and fails in CI — the deterministic-test rule, applied.
+- **Mock at the network boundary (MSW), not by stubbing the modules under test.** Stubbing internals tests the mock. A request handler returning realistic payloads exercises your parsing, error handling, and loading states the way production will.
+- **Test hooks and components by behavior.** Render the component (or the hook via a tiny harness) and assert what it does — what renders, what the user sees after an interaction — not its internal state or which effect ran. State that's an implementation detail today gets refactored tomorrow.
+- **Fake timers for time-dependent UI.** `jest.useFakeTimers()` / `vi.useFakeTimers()` and advance them deliberately for debounces, intervals, and timeouts. Real timers make the test slow and nondeterministic.
+- **Snapshot deliberately, not reflexively.** Snapshot-everything tests rot into noise that everyone updates with `-u` without reading. Snapshot a small, stable, meaningful piece of output, or assert the specific thing you care about instead.
 
 ## Performance
 

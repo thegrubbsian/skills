@@ -40,9 +40,13 @@ Rails makes two mistakes easy: the fat controller and the fat model. Business lo
 
 ## Testing
 
-- Test behavior through the public interface. Request specs exercise the real stack; heavy controller specs that stub everything test your mocks.
-- Keep factories lean. A factory that builds a whole object graph for every test makes the suite slow and brittle.
-- Don't over-mock. Mocking the thing under test means you're testing nothing.
+- **Test behavior through the public interface.** Request specs exercise the real stack — routing, middleware, controller, model, serializer — and assert what the client actually receives. Heavy controller specs that stub everything test your mocks, not your app.
+- **Keep factories lean, and reach for the lightest one.** A factory that builds a whole object graph for every test makes the suite slow and brittle. `build_stubbed` when you don't need the database, `build` when you don't need it persisted, `create` only when you do. Default everyone to `create` and the runtime balloons for no reason.
+- **System specs for critical flows only.** A few end-to-end specs through a real browser for the paths that must not break (signup, checkout). They're slow and flakier; don't reimplement your unit coverage in Capybara.
+- **Test the invariant and the constraint behind it.** When a uniqueness or presence rule matters, assert both the model validation (the friendly error) and that the database constraint holds the line under a concurrent duplicate insert. A green validation spec with no index behind it is the false-confidence trap from the lens.
+- **Freeze time, don't sleep.** `travel_to` / `freeze_time` for date-dependent behavior; never `sleep` to wait for a job. A spec that leans on the wall clock or real timing is a flaky test waiting to happen.
+- **Test jobs and their idempotency.** A retried job must not double-charge — so write the spec that runs it twice and asserts one charge. Assert the job's effect, not that `perform_later` was called.
+- **Don't over-mock.** Mocking the thing under test means you're testing nothing. Stub the third-party HTTP call (WebMock/VCR) and the clock; let your own objects run.
 
 ## Performance
 

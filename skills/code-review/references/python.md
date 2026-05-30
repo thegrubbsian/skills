@@ -49,9 +49,17 @@ Python lets you pass a dict everywhere, which is exactly why data code drifts in
 
 ## Testing
 
-- The pure transforms are the testable core. Test them with small, hand-built fixtures, not a 2 GB sample.
-- Property-based testing (Hypothesis) is a strong fit for data transforms: assert invariants ("output row count never exceeds input," "no nulls introduced") rather than enumerating cases.
-- Don't test pandas. Test your logic.
+The pure transforms are the testable core. Test them with small, hand-built fixtures, not a 2 GB sample, and push the I/O to the edges so the logic can be tested without the world attached.
+
+- **`pytest` is the baseline.** Plain functions with `assert`, not `unittest.TestCase` boilerplate. One behavior per test, and a name that says what broke.
+- **`parametrize` over copy-paste.** `@pytest.mark.parametrize` turns a dozen near-identical cases into one table, and makes the edge cases you cover (and the ones you don't) visible at a glance.
+- **Fixtures, with an eye on scope.** Function-scoped by default. A `scope="module"` or `scope="session"` fixture holding mutable state leaks between tests and creates order-dependence — the pytest form of the shared-mutable-fixture bug. Use `tmp_path` / `tmp_path_factory` for filesystem work instead of writing into the repo.
+- **Mock at the I/O boundary, not the transform.** `monkeypatch` for env and attributes; `responses` or `respx` for HTTP; a small in-memory double for the database. If you're patching the function under test, you're testing the patch. The reason to separate transforms from I/O is so you barely have to mock at all.
+- **Property-based testing (Hypothesis)** fits data transforms: assert invariants ("output row count never exceeds input," "no nulls introduced," "round-trips losslessly") rather than enumerating cases. It finds the empty frame and the single-row frame you didn't think to write.
+- **Freeze time, seed randomness.** `freezegun` or an injected clock for date-dependent logic; an explicit seed for anything stochastic. A test whose result depends on the day it runs is already broken.
+- **For ML, test the boundaries that rot.** A test that fits a transformer on train and asserts it never touched test data catches leakage; a test that runs one input through both the training and serving feature code catches skew. These are the bugs that don't show up until production.
+- **Mark the slow and integration tests** (`@pytest.mark.slow`, `@pytest.mark.integration`) so the fast suite stays runnable on every change. A suite nobody runs because it takes ten minutes protects nothing.
+- **Don't test pandas. Test your logic.** Asserting that `groupby` groups is testing the library; assert the business rule your transform encodes.
 
 ## Performance
 

@@ -1,6 +1,6 @@
 ---
 name: code-review
-description: Review code and architecture for quality, then improve what is worth improving. Works through two lenses, architecture (boundaries, coupling, whether abstractions earn their keep, whether the design fits the problem) and code (correctness, clarity, maintainability, common defects). Use this whenever the user asks to review, critique, improve, refactor, harden, or assess code; whenever they share a diff, PR, file, module, schema, or design and want feedback; whenever they ask things like "is this any good", "how would you improve this", "does this design make sense", "what's wrong with this", or "should I refactor this"; and proactively before writing non-trivial new code or proposing an architecture, to pressure-test the approach first. Apply it even when the user never says the word "review" but is clearly fishing for a quality judgment on code or a design.
+description: Review code and architecture for quality, then improve what is worth improving. Works through three lenses: architecture (boundaries, coupling, whether abstractions earn their keep, whether the design fits the problem), code (correctness, clarity, maintainability, common defects), and testing (are the tests trustworthy — behavior over implementation, deterministic, covering risky paths). Use this whenever the user asks to review, critique, improve, refactor, harden, or assess code; whenever they share a diff, PR, file, module, schema, or design and want feedback; whenever they ask things like "is this any good", "how would you improve this", "does this design make sense", "are these good tests", or "should I refactor this"; and proactively before writing non-trivial new code or proposing an architecture, to pressure-test the approach first. Apply it even when the user never says "review" but is clearly fishing for a quality judgment on code, tests, or a design.
 ---
 
 # Quality Review
@@ -23,7 +23,7 @@ Hold these the whole way through. They decide what counts as a finding.
 ## Workflow
 
 1. **Understand intent first.** State in one sentence what this code or design is trying to do. If you can't, ask before reviewing. Reviewing against a guessed purpose produces confident nonsense.
-2. **Run the architecture lens (macro), then the code lens (micro).** For a design discussion with no code yet, run the architecture lens only.
+2. **Run the architecture lens (macro), then the code lens (micro), then the testing lens (the safety net).** For a design discussion with no code yet, run the architecture lens only.
 3. **Prioritize** every finding by impact (see severity scheme below). Do not present them in the order you happened to notice them.
 4. **Deliver** constructively: what, why it matters, and a concrete direction. Show the better version where it helps.
 5. **If asked to improve or refactor, not just review,** make the change for the high-value findings, then explain what you changed and why. Leave the taste-level items as suggestions unless told otherwise.
@@ -55,8 +55,18 @@ When you are handed a plan, an RFC, a schema sketch, or a verbal approach instea
 - **Clarity.** Names that say what they mean, functions that do one thing, dead code removed, comments that explain *why* and not *what*.
 - **Duplication, judged not reflexed.** Remove duplication that hides a real shared concept. Leave duplication that is merely two things that happen to look alike today.
 - **Size, judged not counted.** When a file, class, or module pushes past roughly a thousand lines, treat it as a prompt to look, not an automatic finding. Oversized units almost always carry more than one job, and they are hard to hold in working context — for the next reader, and for AI tools, which lose the thread once the code no longer fits in view. Flag the *seam*: the responsibility that wants to become its own module, not an arbitrary cut to hit a number. Splitting along a real boundary is good decomposition; halving a file to satisfy a count just relocates the mess.
-- **Tests.** Do they exist on the risky paths? Do they cover edges and failure cases? Do they test observable behavior rather than implementation details that break on every refactor?
 - **Performance, real not micro.** Flag N+1 queries, unbounded loops or fetches, accidental quadratics, work done in a loop that belongs outside it. Ignore micro-optimizations that trade readability for nanoseconds.
+
+## Testing lens
+
+Tests exist to let you change the code without fear — judge a suite by whether it catches real regressions and survives harmless refactors.
+
+- **Test behavior, not implementation.** Assert observable outcomes through the public interface; mock only what you don't own. Tests that pin internals break on every refactor and verify little.
+- **Coverage where the risk lives, judged not counted.** The complex and irreversible paths need tests; a high coverage percentage over trivial glue proves nothing. Missing tests on a risky path is itself a finding.
+- **A test has to be able to fail.** One that stays green when the behavior breaks sells false confidence — watch for assertions that assert nothing, or expected values copied from a prior run.
+- **Deterministic and isolated.** Flakiness from clocks, ordering, randomness, or shared state trains people to rerun-until-green and ignore failures. Each test must run in any order.
+- **The right level for the job.** Fast unit tests for logic, integration tests for the seams that actually break, a few end-to-end tests for critical flows; an inverted pyramid of slow e2e is a smell.
+- **Cover the failure paths, not just the happy one.** The mirror of the architecture lens's failure-modes check: errors, empty or malformed input, boundaries, and the degraded states the system will actually hit.
 
 ## Prioritize findings
 
@@ -96,9 +106,9 @@ This file stays language-agnostic on purpose. For deeper, stack-specific checks,
 code-review/
 ├── SKILL.md            (this file: principles, workflow, lenses)
 └── references/
-    ├── python.md       (typing, data-pipeline boundaries, pandas footguns, ML leakage)
-    ├── ruby-rails.md   (controller/model boundaries, ActiveRecord and N+1, callbacks, migrations)
-    └── typescript.md   (strict types, discriminated unions, React effect/state smells, validation at the edge)
+    ├── python.md       (typing, data-pipeline boundaries, pandas footguns, ML leakage, pytest test design)
+    ├── ruby-rails.md   (controller/model boundaries, ActiveRecord and N+1, callbacks, migrations, RSpec test design)
+    └── typescript.md   (strict types, discriminated unions, React effect/state smells, validation at the edge, Testing Library test design)
 ```
 
 When the code in front of you is in one of these stacks, read the matching reference file and apply its checks on top of the language-agnostic lenses above. Load only the one that matches. The core file stays language-agnostic.
