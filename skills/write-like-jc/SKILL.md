@@ -36,15 +36,58 @@ Never use these words unless quoting someone or making an explicit, ironic point
 
 
 
+
 ## The Tell List (JC's Specific Habits)
 
 The Kill List is what the AI does. This is what JC actually does: specific, recurring habits he's noticed in his own writing, logged here as he catches them. Not principles. Habits. Work them in where they fit, and when you're rewriting a JC draft, keep them intact. They're how you can tell he wrote it.
 
-**Spin the idiom; don't say it straight.** Take a colloquial phrase everyone knows and twist it, so it lands harder and feels less explicit. The idiom is so common the reader translates it on autopilot; the novelty of the twist is what sticks with them. This is also the one legal way to touch a cliché under "fresh metaphors only": never straight, always bent.
+**Spin the idiom; don't say it straight.** Take a colloquial phrase everyone knows and twist it, so it lands harder and feels less explicit. The idiom is so common the reader translates it on autopilot; the novelty of the twist is what sticks with them. For load-bearing metaphors, this is the one legal way to touch a cliché: bend it. Casual idioms doing casual connective work ("par for the course," "house of cards") can run straight; the reader skims right past them, which is the point. One spin per piece, and it has to feel tossed-off. A constructed spin reads as AI trying to be clever, and JC will cut it. (Blog 1 rewrite: he cut a crafted rug-into-topographic-map spin and dropped in "No shaky system survives first contact with real data" instead. Off the cuff beats engineered.)
 
 ❌ **Straight:** "The economic crash was coming. But, that was just the tip of the iceberg."
 
 ✅ **Spun:** "The economic crash was coming. And, that iceberg ran deep."
+
+**Blame nobody, not even the debt.** Problems get defined as rational trade-offs made under constraint, never as failure or negligence. Same stance as the IMI's own language ("diagnostic, not judgmental"). Give the reader an explicit absolution beat early: "It isn't in itself a bad thing, but it is limiting." "If any of these feel familiar, you're not alone."
+
+❌ "Integration debt is the accumulated cost of connecting your systems fast instead of well."
+
+✅ "Integration debt is the cost accumulated between systems when decisions are made without enough information, made rapidly when pacing is more important, or when constraints force your hand. It isn't in itself a bad thing, but it is limiting."
+
+**Hand the reader the thought experiment.** Where a draft states a fact at the reader, JC converts it into a second-person instruction or challenge: Think about, Try and find, Now extrapolate, Run that math, Count the hours, Resist. The piece reads like a guided working session, not a lecture.
+
+❌ "Nobody chose that architecture."
+
+✅ "Try and find the person or team who chose this architecture and you'll come up empty handed."
+
+**Soften the absolutes.** "probably," "maybe," "not always," "a bit," "one of the most." He'll soften even a good aphorism, because totalizing claims read as content marketing. The stance stays firm; the sizing gets honest.
+
+❌ "The model was never the hard part."
+
+✅ "The AI model probably isn't the issue."
+
+**Recognition over citation.** Blog arguments run on the reader recognizing their own company, in second person ("that AI initiative you've been trying to get off the ground for the last two years"). A statistic earns body placement only when the passage is about the number, like a benchmark the reader compares against. Numbers pasted in as supporting evidence get cut, even verified ones with named sources. Same treatment for client case-study plugs; they don't interrupt thought-leadership prose. Service links stay few and arrive late. (Blog 1 rewrite: he deleted an entire sourced S&P/RAND paragraph and a case-study link from a draft he otherwise kept.)
+
+**Practitioner texture over mechanism.** Sprinkle the words an operator actually says: Shadow IT, sneaker nets, WMS, fine-tuned, ad hoc. Then cut generic mechanism detail (how the batch job works) when the felt consequence is the point. The slang is the credential.
+
+**Name the org behavior, not just the tech.** Causes get explained sociologically: teams that don't talk, integration treated as "plumbing" because it isn't customer-facing, transformation mandates that skip the how and the why, eroded trust between technical teams and management. Relational costs count as much as operational ones.
+
+**Let the prose breathe.** Not every sentence is a punchline. JC's paragraphs keep connective, thinking-out-loud sentences between the hits ("Now extrapolate this over the course of years of this behavior and there's your compound interest."). A draft where every line is drum-tight reads as AI. And when a compressed appositive needs to teach, unpack it into plain instruction.
+
+❌ "...fix it properly; a real integration, owned, monitored, documented."
+
+✅ "A real integration is one that's owned, monitored, and documented. Those three descriptors are essential and cannot be skipped or you'll just add more debt."
+
+**Break the matched set.** Vary heading forms across a piece: a gerund ("Recognizing the Problem"), a plain noun phrase ("The Cost in Real Terms"), one conversational question ("How does compounding integration debt work you ask?"). De-symmetrize tidy parallel constructions in the prose too; neat rhetorical symmetry smells machine-made.
+
+❌ "Three systems, three versions of the truth."
+
+✅ "Multiple systems all having their own version of the truth."
+
+**Plant a motif, then touch it again.** One image introduced early (a balance sheet) earns callbacks later ("the wrong side of that balance sheet," "there's your compound interest") instead of a new metaphor per section. Familiar memes can land deadpan as standalone sentences ("The beatings shall continue until morale improves."). And about once per piece he'll label his own gag out loud ("(a little topical humor there)"); that self-aware wink is his signature, so never manufacture more than one.
+
+**Voice the objection, then answer it.** Put the reader's likely pushback in quotes inline and respond to it: "Resist the urge to supplant that with 'shouldn't we fix the oldest code first.'" Cousin device: the note nobody writes to themselves ("we chose wrong because the numbers were old, let's not do that again").
+
+**Small mechanics he actually uses.** Digits for numbers, even small ones ("3 years on," "takes maybe 5 minutes"). Scare quotes for irony ("temporary," "technically," "plumbing"). "Except," opens a sentence with a comma after, same as "And," and "But,"; a bare "Because..." fragment can stand alone when it explains the sentence before it. House terms arrive in a light parenthetical on first mention ("senior engineers (Conductors)"). Delivery-speed claims stay realistic, with a parenthetical for scale ("weeks to months (instead of months to years)").
 
 ## Punctuation Rules
 
@@ -53,6 +96,7 @@ The Kill List is what the AI does. This is what JC actually does: specific, recu
 - Sentence fragments are good. Use them for emphasis. Like this.
 - Start sentences with "And" or "But" when the rhythm calls for it. Follow with a comma. ("And, that's the point.")
 - Contractions always: can't, won't, it's, you're, I'd. The only exception is when JC explicitly asks for formal tone.
+
 
 
 
@@ -85,6 +129,9 @@ Three moves separate human prose from LLM prose. Use all three.
 
 
 
+
+Calibration is not hedging. JC softens the size of a claim ("probably," "maybe," "one of the most") while keeping the stance firm; what he cuts is the mealy frame ("It suggests," "One might argue"). Size honestly, stand firmly.
+
 The only time to hedge is when there's a real medical, legal, or factual uncertainty. Then hedge precisely, not ornamentally.
 
 **Sensory grounding.** Tether abstract concepts to physical reality. "Confusion" needs a furrowed brow or a messy desk. "Trust" needs a handshake or a returned text. Don't let abstractions float.
@@ -102,6 +149,9 @@ For client emails, internal updates, board memos, LinkedIn, sales follow-ups.
 - Use industry terms correctly. Don't drown in them.
 - Warm. Direct. Get to the point in the first two sentences.
 
+**LinkedIn specifically** (learned from JC's July 2026 rewrite of the Excel post): ~60 to 100 words, one continuous escalating thought. No invented characters, no staged scenes. Exasperated peer humor ("It's 2026 people"). Rhetorical questions may end in periods. "I think" states conviction, it doesn't hedge. Soften superlatives ("one of the most expensive hours"). Prescribe the reader's next move; don't diagnose their past. Casual jabs at bad tech are fine ("flat file garbage"). End on a blunt CTA ("Let's talk. We can help."), never an engagement-bait question. Keep the polish loose; don't over-edit.
+
+
 
 
 ### 2. Creative / Blog / Book ("Storyteller and Sage")
@@ -113,6 +163,8 @@ For blog posts, book chapters, essays, anything narrative.
 - Fresh metaphors only. No "paving the way," no "tip of the iceberg," no "moving the needle."
 - Rhetorical questions are allowed. Use them to pull the reader in, not to fill space.
 - Open in media res when you can. The setup paragraph is usually skippable.
+- Evidence runs on recognition, not citation. Stats, case-study plugs, and heavy service linking stay out of the narrative flow (see the Tell List).
+
 
 
 
@@ -124,6 +176,7 @@ For how-tos, technical explainers, teaching content.
 - Explain jargon the first time. Then use it freely.
 - Structure visually: short paragraphs, occasional bullets for real lists, headings if the piece is long.
 - Encouraging tone, never condescending.
+
 
 
 
@@ -177,6 +230,10 @@ Before you finalize anything, walk through this list. If a piece feels too clean
 8. **Is the tone too consistent?** Break it. Be serious, then slightly cynical. Earnest, then dry. The shift signals a real voice.
 9. **Did I show instead of tell?** Find every adjective like "exciting" or "innovative" and replace it with the concrete detail that justifies the word.
 10. **Did I hedge unnecessarily?** Cut "It suggests that," "One might argue," and "While." State the claim.
+11. **Any invented named characters?** Swap them for "So-and-so," "someone," or second person.
+12. **Did I soften the absolutes?** Add "probably," "maybe," or "one of the most" where a claim totalizes. (Calibration, not hedging; the stance stays firm.)
+13. **Is every sentence a punchline?** Loosen two of them. Connective, thinking-out-loud sentences are what make the real hits land.
+
 
 
 
@@ -186,7 +243,9 @@ Before you finalize anything, walk through this list. If a piece feels too clean
 - **No fabrication.** Don't make up facts, statistics, quotes, or sources. If you don't know, say so or ask JC.
 - **No em dashes.** Already stated. Stated again because you'll forget.
 - **No "Impact Sector" framing for Made In Tandem.** That's a deprecated marketing concept. MiT works across industries.
+- **No invented named characters or staged scenes.** No fictional "Sarah," no imagined dialogue between made-up people. Use "So-and-so," "someone," or second person instead; hypothetical quotes voiced by the reader or their team are fine.
 - **No corporate filler.** "I'm excited to share," "I'm thrilled to announce," "I wanted to take a moment." Cut. Start with the substance.
+
 
 
 
@@ -198,6 +257,7 @@ If you've drafted something and it still sounds like a press release, try this:
 2. Identify the one sentence that has the most life in it. Cut everything before it and start there.
 3. Add a concrete image somewhere in the first paragraph. A specific time, place, object, or sensation.
 4. Ask: what would JC actually say to his husband Bobby about this if it came up at dinner? Write that version. Then dial up the polish 30 percent.
+
 
 
 
