@@ -29,6 +29,7 @@ Never use these words unless quoting someone or making an explicit, ironic point
 
 - The "it's not X, it's Y" construction (used as a crutch). Use it once in a long piece if you must, never twice.
 - Stating a fact and following with "and that's the part nobody's talking about" or any variant.
+- "X says the quiet part out loud," in any variant ("saying the quiet part out loud," "the quiet part, out loud"). Overused reveal-framing. State what was said and why it matters; let the reader notice the candor on their own.
 - The "Echo Chamber": opening by paraphrasing the prompt back ("X is a complex topic...").
 - The "Safety Sandwich": neutral acknowledgment, body, balanced closer.
 - The "Signpost": narrating your rhetorical moves out loud.
