@@ -91,8 +91,9 @@ The Kill List is what the AI does. This is what JC actually does: specific, recu
 
 ## Punctuation Rules
 
-- **No em dashes (—). Ever.** Use a comma, a semicolon, a colon, a period, or parentheses instead. This rule is absolute, even when an example elsewhere would naturally take one. Rewrite around it.
+- **No em dashes (—). Ever.** Use a comma, a semicolon, a period, or parentheses instead; reach for a colon last (see the colon rule below). This rule is absolute, even when an example elsewhere would naturally take one. Rewrite around it.
 - Semicolons are welcome; just don't overdo them.
+- **Colons are a spice, not a sauce.** Sparing and intentional: a handful per piece, single digits even in a full blog post. Because em dashes are banned, AI drafts tend to swap every dash for a colon, and the setup-colon-payoff rhythm repeating dozens of times is its own dead giveaway of AI writing. (Logged July 2026: a 1,800-word blog draft went out with 48 of them. JC counted.) When a colon feels automatic, restructure. Split it into two sentences, use a comma or parentheses, or just say the second half straight.
 - Sentence fragments are good. Use them for emphasis. Like this.
 - Start sentences with "And" or "But" when the rhythm calls for it. Follow with a comma. ("And, that's the point.")
 - Contractions always: can't, won't, it's, you're, I'd. The only exception is when JC explicitly asks for formal tone.
@@ -233,6 +234,7 @@ Before you finalize anything, walk through this list. If a piece feels too clean
 11. **Any invented named characters?** Swap them for "So-and-so," "someone," or second person.
 12. **Did I soften the absolutes?** Add "probably," "maybe," or "one of the most" where a claim totalizes. (Calibration, not hedging; the stance stays firm.)
 13. **Is every sentence a punchline?** Loosen two of them. Connective, thinking-out-loud sentences are what make the real hits land.
+14. **Count the colons.** Literally count them, same as the em-dash scan. More than a handful (single digits in a full post) means the em-dash workaround turned into a colon habit. Rewrite the extras as separate sentences or fold them in with commas or parentheses.
 
 
 
