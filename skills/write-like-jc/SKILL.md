@@ -48,7 +48,7 @@ The Kill List is what the AI does. This is what JC actually does: specific, recu
 
 ✅ **Spun:** "The economic crash was coming. And, that iceberg ran deep."
 
-**Blame nobody, not even the debt.** Problems get defined as rational trade-offs made under constraint, never as failure or negligence. Same stance as the IMI's own language ("diagnostic, not judgmental"). Give the reader an explicit absolution beat early: "It isn't in itself a bad thing, but it is limiting." "If any of these feel familiar, you're not alone."
+**Blame nobody, not even the debt.** Problems get defined as rational trade-offs made under constraint, never as failure or negligence. Same stance as the IMI's own language ("diagnostic, not judgmental"). Give the reader an explicit absolution beat early: "It isn't in itself a bad thing, but it is limiting." "If any of these feel familiar, you're not alone." Absolve by constraint, not by verdict: show the old way was the only real option instead of declaring nobody guilty. (Intent Over Syntax rewrite: "Nobody was wrong to build the old structure" became "The old structure was all we had... a rational trade-off, and until very recently the only option that existed.")
 
 ❌ "Integration debt is the accumulated cost of connecting your systems fast instead of well."
 
@@ -60,15 +60,17 @@ The Kill List is what the AI does. This is what JC actually does: specific, recu
 
 ✅ "Try and find the person or team who chose this architecture and you'll come up empty handed."
 
-**Soften the absolutes.** "probably," "maybe," "not always," "a bit," "one of the most." He'll soften even a good aphorism, because totalizing claims read as content marketing. The stance stays firm; the sizing gets honest.
+**Soften the absolutes.** "probably," "maybe," "not always," "a bit," "one of the most." He'll soften even a good aphorism, because totalizing claims read as content marketing. The stance stays firm; the sizing gets honest. Calibration runs both directions, though: the one load-bearing claim hardens while the sweeping ones soften. (Intent Over Syntax rewrite: "matters more than people expect" became "is the crux" in the same pass that turned "the same move" into "a similar (albeit more generalized and expansive) move.")
 
 ❌ "The model was never the hard part."
 
 ✅ "The AI model probably isn't the issue."
 
+**Write the shift as in progress, not accomplished.** Claims about the AI transition run present progressive and scoped, and the fait-accompli drama line gets cut. But the hypothetical becomes actual; the change is real and current, it just isn't finished. (Intent Over Syntax rewrite: "collapsed the translation layer" became "is collapsing," "the trade changed underneath us" became "is changing," the standalone "That assumption just expired." came out entirely, a scope guard arrived ("If your team is writing code with agents..."), and "If syntax is nearly free" hardened to "When syntax is nearly free.")
+
 **Recognition over citation.** Blog arguments run on the reader recognizing their own company, in second person ("that AI initiative you've been trying to get off the ground for the last two years"). A statistic earns body placement only when the passage is about the number, like a benchmark the reader compares against. Numbers pasted in as supporting evidence get cut, even verified ones with named sources. Same treatment for client case-study plugs; they don't interrupt thought-leadership prose. Service links stay few and arrive late. (Blog 1 rewrite: he deleted an entire sourced S&P/RAND paragraph and a case-study link from a draft he otherwise kept.)
 
-**Practitioner texture over mechanism.** Sprinkle the words an operator actually says: Shadow IT, sneaker nets, WMS, fine-tuned, ad hoc. Then cut generic mechanism detail (how the batch job works) when the felt consequence is the point. The slang is the credential.
+**Practitioner texture over mechanism.** Sprinkle the words an operator actually says: Shadow IT, sneaker nets, WMS, fine-tuned, ad hoc. Then cut generic mechanism detail (how the batch job works) when the felt consequence is the point. The slang is the credential. One exception: at the formal positioning beat, slang un-abbreviates. (Intent Over Syntax rewrite: "spec" and "evals" stayed where practitioners-call-these teaches them, but the Conductor sentence got "specification," "evaluations," and "senior engineer-architect.")
 
 **Name the org behavior, not just the tech.** Causes get explained sociologically: teams that don't talk, integration treated as "plumbing" because it isn't customer-facing, transformation mandates that skip the how and the why, eroded trust between technical teams and management. Relational costs count as much as operational ones.
 
@@ -78,17 +80,21 @@ The Kill List is what the AI does. This is what JC actually does: specific, recu
 
 ✅ "A real integration is one that's owned, monitored, and documented. Those three descriptors are essential and cannot be skipped or you'll just add more debt."
 
+Narrative fragment chains are the specific tell. Consecutive clipped claims get rejoined into one flowing sentence with and/but; enumerative runs (parallel items in a list) stay clipped. (Intent Over Syntax rewrite: "It compiles. The demo goes fine. The tests pass" became "The code compiles, the demo goes fine, and tests pass"; "The dials still spin. They've just come loose" became "These dials still spin but they've come loose." Meanwhile "A spec. Constraints. Review notes. A pile of decisions." and "The measures. The requirements discipline. The definition of 'done.'" survived untouched.)
+
 **Break the matched set.** Vary heading forms across a piece: a gerund ("Recognizing the Problem"), a plain noun phrase ("The Cost in Real Terms"), one conversational question ("How does compounding integration debt work you ask?"). De-symmetrize tidy parallel constructions in the prose too; neat rhetorical symmetry smells machine-made.
 
 ❌ "Three systems, three versions of the truth."
 
 ✅ "Multiple systems all having their own version of the truth."
 
-**Plant a motif, then touch it again.** One image introduced early (a balance sheet) earns callbacks later ("the wrong side of that balance sheet," "there's your compound interest") instead of a new metaphor per section. Familiar memes can land deadpan as standalone sentences ("The beatings shall continue until morale improves."). And about once per piece he'll label his own gag out loud ("(a little topical humor there)"); that self-aware wink is his signature, so never manufacture more than one.
+**Plant a motif, then touch it again.** One image introduced early (a balance sheet) earns callbacks later ("the wrong side of that balance sheet," "there's your compound interest") instead of a new metaphor per section. Familiar memes can land deadpan as standalone sentences ("The beatings shall continue until morale improves."). And about once per piece he'll label his own gag out loud ("(a little topical humor there)"); that self-aware wink is his signature, so never manufacture more than one. Only the primary motif earns the callbacks; a supporting analogy fires once and goes quiet, and a sibling essay's central image gets named or linked, never restaged. (Intent Over Syntax rewrite: the lands-of-intent-and-syntax motif kept its echoes while "That ledger will tell you" flattened to "That record will tell you," the "border crossing" callback got cut, and a conductor-in-rehearsal line that re-performed the origin essay came out entirely.)
 
 **Voice the objection, then answer it.** Put the reader's likely pushback in quotes inline and respond to it: "Resist the urge to supplant that with 'shouldn't we fix the oldest code first.'" Cousin device: the note nobody writes to themselves ("we chose wrong because the numbers were old, let's not do that again").
 
-**Small mechanics he actually uses.** Digits for numbers, even small ones ("3 years on," "takes maybe 5 minutes"). Scare quotes for irony ("temporary," "technically," "plumbing"). "Except," opens a sentence with a comma after, same as "And," and "But,"; a bare "Because..." fragment can stand alone when it explains the sentence before it. House terms arrive in a light parenthetical on first mention ("senior engineers (Conductors)"). Delivery-speed claims stay realistic, with a parenthetical for scale ("weeks to months (instead of months to years)").
+**Cut the intensifier, add the second noun.** Load-bearing abstractions arrive as and-joined pairs while intensifier adverbs die. (Intent Over Syntax rewrite: "favors seniority hard" became "favors seniority and mastery"; "deciding what should exist" became "deciding and describing"; "say what it wants" became "define and communicate what it wants"; the one-word answer "Judgment." grew into "Curiosity, discernment, and judgement.")
+
+**Small mechanics he actually uses.** Digits for numbers, even small ones ("3 years on," "takes maybe 5 minutes"). Scare quotes for irony ("temporary," "technically," "plumbing"). "Except," opens a sentence with a comma after, same as "And," and "But,"; a bare "Because..." fragment can stand alone when it explains the sentence before it. House terms arrive in a light parenthetical on first mention ("senior engineers (Conductors)"). Delivery-speed claims stay realistic, with a parenthetical for scale ("weeks to months (instead of months to years)"). In-sentence lists close with and/or, not bare asyndeton ("hourly billing, and the shape of the org chart"; "story points, or lines shipped"). An emphatic beat-ender may un-contract ("And, it cannot be bought as a tool."). (Intent Over Syntax rewrite.)
 
 ## Punctuation Rules
 
@@ -96,7 +102,7 @@ The Kill List is what the AI does. This is what JC actually does: specific, recu
 - Semicolons are welcome; just don't overdo them.
 - **Colons are a spice, not a sauce.** Sparing and intentional: a handful per piece, single digits even in a full blog post. Because em dashes are banned, AI drafts tend to swap every dash for a colon, and the setup-colon-payoff rhythm repeating dozens of times is its own dead giveaway of AI writing. (Logged July 2026: a 1,800-word blog draft went out with 48 of them. JC counted.) When a colon feels automatic, restructure. Split it into two sentences, use a comma or parentheses, or just say the second half straight.
 - Sentence fragments are good. Use them for emphasis. Like this.
-- Start sentences with "And" or "But" when the rhythm calls for it. Follow with a comma. ("And, that's the point.")
+- Start sentences with "And" or "But" when the rhythm calls for it. Follow with a comma when the clause starts immediately ("And, that's the point."). When "when," "also," "if," or a gerund follows, skip the comma ("But when an agent writes the code..."; "But reorganizing the work around intent...").
 - Contractions always: can't, won't, it's, you're, I'd. The only exception is when JC explicitly asks for formal tone.
 
 
