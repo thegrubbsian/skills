@@ -1,6 +1,5 @@
 
 
-
 ## Engineering Principles
 
 - Always follow SOLID principles both when writing code and reviewing it
@@ -11,6 +10,10 @@
 - Don't use deprecated or undocumented APIs
 - Write idiomatic code in whatever language you’re writing, don’t invent new patterns or conventions
 - Choose human-friendly names for things, variables, classes, modules, functions, write code that’s easy for human to understand
+
+### When Using Subagents
+
+Use faster agents for mechanical tasks and fix rounds, while keeping an independent task reviewer and the strongest available reviewer for larger blocks of work.
 
 ## Responding to me, IMPORTANT!
 
