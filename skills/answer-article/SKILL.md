@@ -5,7 +5,7 @@ description: Drafting MiT's Tuesday LinkedIn answer articles and any other answe
 
 # Answer Article
 
-Answer articles are MiT's AI-citation assets: LinkedIn Articles published from the company page every Tuesday, shaped like direct answers to questions mid-market buyers actually ask AI assistants. They exist because AI models cite structured, specific, decision-support content (Meltwater x LinkedIn, 9.5M citations, May 2026: bullets in 100% of top-cited articles, headings in 92%, named entities in 75%, hard numbers in 67%, comparison frameworks in 50%).
+Answer articles are MiT's AI-citation assets: native LinkedIn Articles published every Tuesday from JC's personal profile (changed Aug 31, 2026; previously the company page), shared the same day by the MiT company page, and shaped like direct answers to questions mid-market buyers actually ask AI assistants. They exist because AI models cite structured, specific, decision-support content (Meltwater x LinkedIn, 9.5M citations, May 2026: bullets in 100% of top-cited articles, headings in 92%, named entities in 75%, hard numbers in 67%, comparison frameworks in 50%).
 
 ## Hard dependency and the zoning rule
 
@@ -33,7 +33,7 @@ Length: 800 to 1,500 words. Longer means it should have been two articles.
 
 ## Companion share post
 
-Every answer article ships with a personal share post for JC's profile: 60 to 100 words, pure prose, JC voice per write-like-jc, taking a different door than the article's opening (the LinkedIn link card already shows the title). No hashtags unless JC asks.
+Every answer article ships with a share post for the MiT company page: 60 to 100 words, prose, company voice (first-person plural, credits JC by name as the author), taking a different door than the article's opening (the LinkedIn link card already shows the title). No hashtags unless JC asks.
 
 ## Gates before delivery
 
